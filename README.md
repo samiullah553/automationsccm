@@ -22,20 +22,10 @@ Firewall Rules: Check and adjust firewall rules if necessary to allow PowerShell
 After ensuring these prerequisites, you can execute the script using Invoke-Command to remotely trigger SCCM client actions on the specified computers. The script will iterate through the SCCM action GUIDs in the $SCCMActions array and invoke the Invoke-WMIMethod cmdlet to trigger each action on the SCCM client.
 
 
-
-Client Action Trigger Schedule ID Client Action Name
-{00000000-0000-0000-0000-000000000021} Machine policy retrieval & Evaluation Cycle
-{00000000-0000-0000-0000-000000000022} Machine policy evaluation cycle
-{00000000-0000-0000-0000-000000000001} Hardware inventory cycle
-{00000000-0000-0000-0000-000000000002} Software inventory cycle
-{00000000-0000-0000-0000-000000000003} Discovery Data Collection Cycle
-{00000000-0000-0000-0000-000000000113} Software updates scan cycle
-{00000000-0000-0000-0000-000000000114} Software updates deployment evaluation cycle
-{00000000-0000-0000-0000-000000000031} Software metering usage report cycle
-{00000000-0000-0000-0000-000000000121} Application deployment evaluation cycle
-{00000000-0000-0000-0000-000000000026} User policy retrieval
-{00000000-0000-0000-0000-000000000027} User policy evaluation cycle
-{00000000-0000-0000-0000-000000000032} Windows installer source list update cycle
-{00000000-0000-0000-0000-000000000010} File collection
-
-Invoke-CMClientAction -DeviceName "Computer01" -Action MachinePolicyRetrievalEvalCycle
+Run the script
+clone the code.
+git clone https://github.com/samiullah553/automationsccm.git
+change folder
+cd automationsccm
+.\sccm_policy_on_local.ps1
+.\sccm_policy_on_remote.ps1
