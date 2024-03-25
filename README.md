@@ -25,7 +25,7 @@ After ensuring these prerequisites, you can execute the script using Invoke-Comm
 Run the script
 clone the code.
 git clone https://github.com/samiullah553/automationsccm.git
-change folder
-cd automationsccm
-.\sccm_policy_on_local.ps1
-.\sccm_policy_on_remote.ps1
+change directory.
+   cd automationsccm
+   .\sccm_policy_on_local.ps1
+   .\sccm_policy_on_remote.ps1
